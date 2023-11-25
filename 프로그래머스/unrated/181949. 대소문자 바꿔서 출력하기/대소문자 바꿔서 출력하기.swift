@@ -1,4 +1,17 @@
 import Foundation
 
 
-print(readLine()!.map { $0.isLowercase ? $0.uppercased() : $0.lowercased() }.joined())
+let s1 = readLine()!
+
+var result = ""
+//이러면 s1의 길이만큼 루프
+for i in s1 {
+    
+    if (i.isLowercase){
+        result += i.uppercased()
+    }else if(i.isUppercase){
+        result += i.lowercased()
+    }
+}
+
+print(result)
